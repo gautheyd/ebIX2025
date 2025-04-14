@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Mit XMLSpy v2018 sp1 (x64) (http://www.altova.com) von  (swissgrid ag) bearbeitet -->
+<!--
+  	
+  	Schema agency:			VSE 
+  	Schema version:			1.2
+  	Schema date:				September 2021
+  	
+	Last Change(s):			Latest eCH schemas integrated
+							New acceptance/rejection Codes
+							Extended Unit Codes for Gas sector
+	Change Author:			Sacha Perret
+
+  	Copyright (C) VSE (2021). All Rights Reserved.
+
+	This document and translations of it may be copied and furnished to others, 
+	and derivative works that comment on or otherwise explain it or assist 
+	in its implementation may be prepared, copied, published and distributed, 
+	in whole or in part, without restriction of any kind, provided that the 
+	above copyright notice and this paragraph are included on all such copies 
+	and derivative works. However, this document itself may not be modified in 
+	any way, such as by removing the copyright notice or the references to 
+	VSE, except as needed for the purpose of developing specifications 
+	for VSE, or as required to translate it into languages other than English.
+
+	This document and the information contained herein is provided on an "AS IS"
+	basis and ebIX DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING 
+	BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL 
+	NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR 
+	FITNESS FOR A PARTICULAR PURPOSE.
+ -->
+<xsd:schema xmlns:rsm="http://www.strom.ch" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2" xmlns:ram="urn:un:unece:uncefact:data:draft:ReusableAggregateBusinessInformationEntity:2" targetNamespace="http://www.strom.ch" elementFormDefault="qualified" attributeFormDefault="unqualified" version="12">
+	<!--=======================================================================-->
+	<!--===========================   ResponseFromMPA_Confirm_12 Schema Module   ===================-->
+	<!--=======================================================================-->
+	<xsd:import namespace="urn:un:unece:uncefact:data:draft:ReusableAggregateBusinessInformationEntity:2" schemaLocation="ReusableAggregateBusinessInformationEntity_2p0.xsd"/>
+	<xsd:include schemaLocation="ResponseFromMPA_Confirm_CoreComponents_1p2.xsd"/>
+	<xsd:element name="ResponseFromMPA_Confirm_12" type="rsm:ResponseFromMPA_ConfirmType_12">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Response from Metering Point Administrator to confirm a request</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ResponseFromMPA_ConfirmType_12">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="en">Complex type used for defining the element Response from MPA, Confirm, version 1.2</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="ResponseFromMPA_Confirm_HeaderInformation" type="rsm:EnergyStandardBusinessDocumentHeaderType"/>
+			<xsd:element name="Switch" maxOccurs="unbounded">
+				<xsd:complexType>
+					<xsd:complexContent>
+						<xsd:extension base="rsm:EnergyTransactionType">
+							<xsd:sequence>
+								<xsd:element name="MeteringPoint">
+									<xsd:complexType>
+										<xsd:complexContent>
+											<xsd:extension base="rsm:EnergyMeteringPointLocationType">
+												<xsd:sequence>
+													<xsd:element name="BalanceResponsible" type="rsm:EnergyPartyType" minOccurs="0"/>
+													<xsd:element name="TransportCapacityResponsible" type="rsm:EnergyPartyType" minOccurs="0"/>
+													<xsd:element name="BalanceSupplier" type="rsm:EnergyPartyType" minOccurs="0"/>
+													<xsd:element name="AncillaryServiceProvider" type="rsm:EnergyPartyType" minOccurs="0" maxOccurs="unbounded"/>
+													<xsd:element name="Consumer" type="rsm:ConsumerEnergyPartyType" minOccurs="0"/>
+													<xsd:element name="SwitchDate" type="rsm:SwitchDatePeriodType"/>
+													<xsd:element name="GridBillingMethod" type="rsm:GridBillingMethodType" minOccurs="0" maxOccurs="1"/>
+												</xsd:sequence>
+											</xsd:extension>
+										</xsd:complexContent>
+									</xsd:complexType>
+								</xsd:element>
+								<xsd:element name="RequestedTransaction" type="rsm:AcceptanceStatusType">
+									<xsd:annotation>
+										<xsd:documentation xml:lang="en">Resulting status of the original request that is responded to in this document.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="ReferenceToRequestingDocumentID" type="rsm:DocumentIdentifierType">
+									<xsd:annotation>
+										<xsd:documentation xml:lang="en">Reference to the ID of the request that triggered this response.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="BusinessProcessID" type="rsm:ProcessIdentifierType">
+									<xsd:annotation>
+										<xsd:documentation xml:lang="en">Reference to the ID of the (Overall) Business Process to which the exchange of documents belongs.</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+								<xsd:element name="ReferenceToOriginalDocumentID" type="rsm:DocumentIdentifierType" minOccurs="0">
+									<xsd:annotation>
+										<xsd:documentation xml:lang="en">Reference to the document that is to be cancelled, therefore only used if function code = 1</xsd:documentation>
+									</xsd:annotation>
+								</xsd:element>
+							</xsd:sequence>
+						</xsd:extension>
+					</xsd:complexContent>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
