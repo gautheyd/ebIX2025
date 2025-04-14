@@ -167,6 +167,14 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
+			<xsd:enumeration value="C40">
+ 				<xsd:annotation>
+ 					<xsd:documentation xml:lang="de">
+ 						<ccts:Name>Metered data Community</ccts:Name>
+ 						<ccts:Description>to be specified by VSE</ccts:Description>
+ 					</xsd:documentation>
+ 				</xsd:annotation>
+ 			</xsd:enumeration>
 			<xsd:enumeration value="C87">
 				<xsd:annotation>
 					<xsd:documentation xml:lang="de">

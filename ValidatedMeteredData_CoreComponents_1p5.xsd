@@ -50,7 +50,6 @@
 	<xsd:import namespace="urn:un:unece:uncefact:codelist:draft:ebIX:DocumentAcceptanceReasonCode:3" schemaLocation="ebIX_DocumentAcceptanceReasonCode_12.xsd"/>
 	<xsd:import namespace="urn:un:unece:uncefact:codelist:draft:ebIX:DocumentAcceptanceStatusCode:1" schemaLocation="ebIX_DocumentAcceptanceStatusCode_10.xsd"/>
 	<xsd:import namespace="urn:un:unece:uncefact:codelist:draft:ebIX:BusinessDomainCode:1" schemaLocation="ebIX_BusinessDomainCode_10.xsd"/>
-	<xsd:import namespace="urn:un:unece:uncefact:codelist:draft:ebIX:BusinessReasonCode:11" schemaLocation="ebIX_BusinessReasonCode_11.xsd"/>
 	<xsd:import namespace="urn:un:unece:uncefact:codelist:draft:ebIX:BusinessRoleCode:1" schemaLocation="ebIX_BusinessRoleCode_10.xsd"/>
 	<xsd:import namespace="urn:un:unece:uncefact:codelist:draft:ebIX:TemporaryBusinessRoleCode:2" schemaLocation="ebIX_TemporaryBusinessRoleCode_11.xsd"/>
 	<xsd:import namespace="urn:un:unece:uncefact:codelist:draft:ebIX:BusinessSectorCode:1" schemaLocation="ebIX_BusinessSectorCode_10.xsd"/>
@@ -225,6 +224,8 @@
 							<xsd:pattern value="8716867000139"/>
 							<xsd:pattern value="8716867000146"/>
 							<xsd:pattern value="5400001000016"/>
+							<xsd:pattern value="2404050010123"/>
+							<xsd:pattern value="2404050010124"/>
 						</xsd:restriction>
 						<!-- Additional Product for Natural Gas -->
 					</xsd:simpleContent>
@@ -512,6 +513,7 @@
 						<xsd:pattern value="C12"/>
 						<xsd:pattern value="C23"/>
 						<xsd:pattern value="C37"/>
+						<xsd:pattern value="C40"/>
 						<xsd:pattern value="C87"/>
 					</xsd:restriction>
 				</xsd:simpleType>
@@ -781,6 +783,7 @@
 			<xsd:element name="Role">
 				<xsd:simpleType>
 					<xsd:restriction base="rsm:BusinessRoleCodeType">
+						<xsd:pattern value="CEM"/>
 						<xsd:pattern value="DDQ"/>
 						<xsd:pattern value="DEA"/>
 						<xsd:pattern value="DEC"/>
@@ -822,6 +825,7 @@
 	<xsd:complexType name="BusinessScopeProcessType">
 		<xsd:sequence>
 			<xsd:element name="BusinessReasonType" type="rsm:BusinessReasonCodeType"/>
+			 <!-- pourquoi nous n'avons pas ajouter la restriction ici du C40 ? -->
 			<xsd:element name="ProcessType" type="rsm:BusinessProcessCodeType" minOccurs="0" maxOccurs="0"/>
 			<xsd:element name="BusinessDomainType" type="rsm:BusinessDomainCodeType" fixed="E02"/>
 			<xsd:element name="BusinessSectorType" type="rsm:BusinessSectorCodeType"/>

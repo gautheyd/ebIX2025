@@ -50,7 +50,6 @@
 	<xsd:import namespace="urn:un:unece:uncefact:codelist:draft:ebIX:DocumentAcceptanceReasonCode:3" schemaLocation="ebIX_DocumentAcceptanceReasonCode_12.xsd"/>
 	<xsd:import namespace="urn:un:unece:uncefact:codelist:draft:ebIX:DocumentAcceptanceStatusCode:1" schemaLocation="ebIX_DocumentAcceptanceStatusCode_10.xsd"/>
 	<xsd:import namespace="urn:un:unece:uncefact:codelist:draft:ebIX:BusinessDomainCode:1" schemaLocation="ebIX_BusinessDomainCode_10.xsd"/>
-	<xsd:import namespace="urn:un:unece:uncefact:codelist:draft:ebIX:BusinessReasonCode:1" schemaLocation="ebIX_BusinessReasonCode_10.xsd"/>
 	<xsd:import namespace="urn:un:unece:uncefact:codelist:draft:ebIX:BusinessRoleCode:1" schemaLocation="ebIX_BusinessRoleCode_10.xsd"/>
 	<xsd:import namespace="urn:un:unece:uncefact:codelist:draft:ebIX:TemporaryBusinessRoleCode:2" schemaLocation="ebIX_TemporaryBusinessRoleCode_11.xsd"/>
 	<xsd:import namespace="urn:un:unece:uncefact:codelist:draft:ebIX:BusinessSectorCode:1" schemaLocation="ebIX_BusinessSectorCode_10.xsd"/>
@@ -240,6 +239,8 @@
 						<xsd:restriction base="rsm:ProductIDType">
 							<xsd:pattern value="8716867000030"/>
 							<xsd:pattern value="5400001000016"/>
+							<xsd:pattern value="2404050010123"/>
+							<xsd:pattern value="2404050010124"/>
 						</xsd:restriction>
 						<!-- Additional Product for Natural Gas -->
 					</xsd:simpleContent>
@@ -521,6 +522,7 @@
 						<xsd:pattern value="C11"/>
 						<xsd:pattern value="C12"/>
 						<xsd:pattern value="C24"/>
+						<xsd:pattern value="C40"/>
 					</xsd:restriction>
 				</xsd:simpleType>
 			</xsd:element>
@@ -782,6 +784,7 @@
 			<xsd:element name="Role">
 				<xsd:simpleType>
 					<xsd:restriction base="rsm:BusinessRoleCodeType">
+						<xsd:pattern value="CEM"/>
 						<xsd:pattern value="DEA"/>
 						<xsd:pattern value="DDK"/>
 						<xsd:pattern value="DDQ"/>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!--
+   	En cours de creation, cela n'est pas 100% juste, c'est un exemple de départ
+  -->
+ <xsd:schema xmlns:clmVSE00010="urn:un:unece:uncefact:codelist:draft:ebIX:EnergyProductIdentificationCode:1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2" targetNamespace="urn:un:unece:uncefact:codelist:draft:ebIX:EnergyProductIdentificationCode:1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+ 	<!--Root element code list-->
+ 	<xsd:element name="EnergyProductIdentificationCode" type="clmVSE00010:EnergyProductIdentificationCodeContentType">
+ 		<xsd:annotation>
+ 			<xsd:documentation xml:lang="EN">Root element for EnergyProductIdentificationCode code list</xsd:documentation>
+ 		</xsd:annotation>
+ 	</xsd:element>
+ 	<!--=========================================================================-->
+ 	<!--Content type for code list-->
+ 	<xsd:simpleType name="EnergyProductIdentificationCodeContentType">
+ 		<xsd:annotation>
+ 			<xsd:documentation>Content type for EnergyProductIdentificationCode code list</xsd:documentation>
+ 		</xsd:annotation>
+ 		<xsd:restriction base="xsd:token">
+ 			<xsd:length value="13"/>
+ 			<xsd:enumeration value="2404050010123">
+ 				<xsd:annotation>
+ 					<xsd:documentation xml:lang="en">
+ 						<ccts:Name>Local active energy</ccts:Name>
+ 						<ccts:Description>Energy product in the European Gas Sector</ccts:Description>
+ 					</xsd:documentation>
+ 				</xsd:annotation>
+ 			</xsd:enumeration>
+ 			<xsd:enumeration value="2404050010124">
+ 				<xsd:annotation>
+ 					<xsd:documentation xml:lang="en">
+ 						<ccts:Name>Residual active energie</ccts:Name>
+ 						<ccts:Description>Energy product in the European Electricity Sector</ccts:Description>
+ 					</xsd:documentation>
+ 				</xsd:annotation>
+ 			</xsd:enumeration>
+ 				</xsd:annotation>
+ 			</xsd:enumeration>
+ 		</xsd:restriction>
+ 	</xsd:simpleType>
+ 	<!--=========================================================================-->
+ </xsd:schema>

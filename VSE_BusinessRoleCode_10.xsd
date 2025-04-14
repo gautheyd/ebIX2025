@@ -56,6 +56,14 @@
 					</xsd:documentation>
 				</xsd:annotation>
 			</xsd:enumeration>
+			<xsd:enumeration value="CEM">
+ 				<xsd:annotation>
+ 					<xsd:documentation xml:lang="en">
+ 						<ccts:Name>Community Energy Manager</ccts:Name>
+ 						<ccts:Description>to be specified by ebIX</ccts:Description>
+ 					</xsd:documentation>
+ 				</xsd:annotation>
+ 			</xsd:enumeration>
 		</xsd:restriction>
 	</xsd:simpleType>
 	<!--=========================================================================-->
